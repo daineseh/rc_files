@@ -16,14 +16,14 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 
-export GTK_IM_MODULE="ibus"
+export XIM=ibus	
 export XMODIFIERS="@im=ibus"
-export QT_IM_MODULE="ibus"
-ibus-daemon -d -x -r
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x -r &
+
+urxvtd -q -o -f
 
 VBoxClient-all &
 
-#Start a terminal emulator in the background
-urxvt -T Terminal &
-
-exec awesome
+exec awesome >> ~/.cache/awesome_stdout 2>> ~/.cache/awesome_stderr
