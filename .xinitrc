@@ -17,20 +17,16 @@ fi
 # ...or the Window Manager of your choice
 
 
-
-
-
-
-
 xrdb ~/.Xresources
+VBoxClient-all &
 
 export LANG=zh_TW.UTF-8
 
-export XIM=ibus	
-export XMODIFIERS="@im=ibus"
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon -d -x -r &
+export XIM=fcitx
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+fcitx
 
 urxvtd -q -o -f
 
