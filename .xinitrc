@@ -17,7 +17,7 @@ fi
 # ...or the Window Manager of your choice
 
 
-xrdb ~/.Xresources
+xrdb ~/.Xdefaults
 VBoxClient-all &
 
 export LANG=zh_TW.UTF-8
