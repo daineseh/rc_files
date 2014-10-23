@@ -16,8 +16,8 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 
-
-xrdb ~/.Xdefaults
+xmodmap ~/.Xmodmap
+xrdb ~/.Xresources
 VBoxClient-all &
 
 export LANG=zh_TW.UTF-8
@@ -28,6 +28,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 fcitx
 
+numlockx &
+
 urxvtd -q -o -f
 
+xrandr --output HDMI1 --auto --output VGA1 --auto  --right-of HDMI1
 exec awesome >> ~/.cache/awesome_stdout 2>> ~/.cache/awesome_stderr
