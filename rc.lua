@@ -46,8 +46,8 @@ beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 beautiful.font = "Inconsolata 14"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "urxvtc"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -143,8 +143,8 @@ mytextclock_t = awful.tooltip( {
 -- network usage
 netwidget = wibox.widget.textbox()
 vicious.register(netwidget, vicious.widgets.net,
-                '<span color="#CC9090">⇩${eth0 down_kb}</span>' ..
-                '<span color="#7F9F7F">⇧${eth0 up_kb}</span>', 3)
+                '<span color="#CC9090">⇩${wlp1s0 down_kb}</span>' ..
+                '<span color="#7F9F7F">⇧${wlp1s0 up_kb}</span>', 3)
 
 
 -- CPU usage
