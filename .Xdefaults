@@ -6,16 +6,25 @@ URxvt.shading: 80
 URxvt.perl-ext-common: default,tabbed
 urxvt*fading: 80
 urxvt*title:Rxvt-Unicode
-urxvt*cursorBlink: true
-urxvt*scrollBar: false
 urxvt*saveLines: 65535
+Urxvt*underlineurls: true
+
+! scroll
+URxvt*scrollstyle:           plain
+URxvt*mouseWheelScrollPage:  1
+URxvt*cursorBlink:           1
+URxvt*scrollTtyOutput:       false
+URxvt*scrollWithBuffer:      true
+URxvt*scrollTtyKeypress:     true
+!urxvt*scrollBar: false
 
 !urxvt*borderLess: true
-!
+
+! color
 !urxvt*colorBD: white
 !urxvt*colorIT: green
-!URxvt.background: gray25
-!URxvt.foreground: gray85
+URxvt.background: black
+URxvt.foreground: green
 !URxvt.cursorColor: red3
 !URxvt.color0: #000000
 !URxvt.color1: #800000
@@ -34,8 +43,21 @@ urxvt*saveLines: 65535
 !URxvt.color14: #c0d8f8
 !URxvt.color15: #e0e0e0
 !URxvt.preeditType: Root
-!
-!! urxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1,\ -wenquanyi-*-medium-r-normal--16-*-*-*-p-*-iso10646-1
-!URxvt.font: xft:DejaVu Sans Mono-16,xft:AR PL ShanHeiSun Uni-16
-!URxvt.boldFont: xft:DejaVu Sans Mono-16:Bold,xft:AR PL ShanHeiSun Uni-16:Bold
-!
+
+! font
+URxvt*font:xft:Inconsolata:size=16,xft:Noto Sans CJK TC:style=Light:size=16,xft:DejaVu Sans Mono,xft:Symbola
+URxvt*internalBorder:        1
+!URxvt.font: xft:DejaVu Sans Mono-14,xft:AR PL ShanHeiSun Uni-14
+URxvt.boldFont: xft:DejaVu Sans Mono-14:Bold,xft:AR PL ShanHeiSun Uni-14:Bold
+
+!輸入法
+inputMethod: fcitx
+!輸入法樣式可選:Root(置底) OverTheSpot(跟隨)
+URxvt.preeditType: Root
+
+!增加tab的功能
+URxvt.perl-ext-common: default,tabbed
+
+!shift+down：新增tab
+!shif+left：左移
+!shift+right：右移

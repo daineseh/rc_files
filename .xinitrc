@@ -17,8 +17,8 @@ fi
 # ...or the Window Manager of your choice
 
 xmodmap ~/.Xmodmap
-xrdb ~/.Xresources
-VBoxClient-all &
+xrdb -merge ~/.Xdefaults
+#VBoxClient-all &
 
 export LANG=zh_TW.UTF-8
 
