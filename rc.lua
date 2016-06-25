@@ -95,6 +95,9 @@ for s = 1, screen.count() do
 end
 -- }}}
 
+-- Autostart
+awful.util.spawn_with_shell("guake")
+
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
